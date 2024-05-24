@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sidebars/">
+
+    <script src="https://getbootstrap.com/docs/5.3/assets/js/color-modes.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+     <link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    #centered-table {
+       padding-top:50px;
+       margin-top:980px;
+
+    }
+    li{
+       margin-bottom:12px;
+    }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+      .container {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ccc;
+        padding: 10%;
+        margin:1%;
+      }
+      #form-id{
+         transition: 1 ease;
+         display:none;
+      }
+      #form-id-2{
+         transition: 1 ease;
+         display:none;
+      }
+
+    </style>
+
+
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/5.3/examples/sidebars/sidebars.css" rel="stylesheet">
+     <script>
+            window.onload= function() {
+                    var button = document.getElementById("form-acma-button");
+                    var close = document.getElementById("close-form");
+                    var form = document.getElementById("form-id");
+
+                    button.onclick = function(){
+                        form.style.display = "block";
+                    }
+
+                    close.onclick = function(){
+                        form.style.display = "none";
+                    }
+                    var button2 = document.getElementById("form-acma-button-2");
+                    var close2 = document.getElementById("close-form-2");
+                    var form2 = document.getElementById("form-id-2");
+
+                    button2.onclick = function(){
+                        form2.style.display = "block";
+                    }
+
+                    close2.onclick = function(){
+                        form2.style.display = "none";
+                    }
+
+
+            }
+
+
+
+
+
+
+    </script>
+
+</head>
+<body>
+
+
+  <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px; Height:915px;">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+
+      <span class="fs-4">Yönetim Paneli</span>
+    </a>
+    <hr>
+     <ul class="nav nav-pills flex-column mb-auto">
+         <li class="nav-item">
+        <a href="{{url_for('Panel')}}" class="nav-link " aria-current="page">
+          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+          Anasayfa
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="{{url_for('Calisanlar')}}" class="nav-link" aria-current="page">
+          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+          Çalışanlar
+        </a>
+      </li>
+          <li class="nav-item">
+        <a href="{{url_for('Yoneticiler')}}" class="nav-link" aria-current="page">
+          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+          Yöneticiler
+        </a>
+      </li>
+        <li class="nav-item">
+        <a href="{{url_for('Musteriler')}}" class="nav-link " aria-current="page">
+          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+          Müşteriler
+        </a>
+      </li>
+      <li>
+        <a href="{{url_for('Odalar')}}" class="nav-link">
+          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+          Odalar
+        </a>
+      </li>
+      <li>
+        <a href="{{url_for('Oteller')}}" class="nav-link">
+          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
+          Oteller
+        </a>
+      </li>
+      <li>
+        <a href="{{url_for('Tesisler')}}" class="nav-link">
+          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
+          Tesisler
+        </a>
+      </li>
+      <li>
+        <a href="{{url_for('Kullanimlar')}}" class="nav-link active">
+          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+          Kullanımlar
+        </a>
+      </li>
+         <li>
+        <a href="{{url_for('Konaklamalar')}}" class="nav-link">
+          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+          Konaklamalar
+        </a>
+      </li>
+    </ul>
+    <hr>
+    <div class="dropdown">
+      <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="https://github.com/Cyreus.png" alt="" width="32" height="32" class="rounded-circle me-2">
+        <strong>Powered By Cyreus</strong>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+        <li><a class="dropdown-item" href="#">views</a></li>
+        <li><a class="dropdown-item" href="#">triggers</a></li>
+        <li><a class="dropdown-item" href="#">yazımlar</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="{{url_for('Index')}}">Çıkış yap</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+         <table class="table table-hover table-dark" id="centered-table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">TESİS ID</th>
+              <th scope="col">MÜŞTERİ TC</th>
+              <th scope="col">KULLANIM SÜRESİ</th>
+                <th scope="col">#</th>
+
+            </tr>
+          </thead>
+          <tbody>
+          {% for k in kullanimlar %}
+          <tr>
+              <th scope="row">*</th>
+              <td>{{k[1]}}</td>
+              <td>{{k[2]}}</td>
+              <td>{{k[0]}}</td>
+              <td>
+                  <form action="/deletekullanimlar" method="post">
+
+                      <input type="hidden"  name="MusteriTC"  value="{{k[2]}}" required>
+                      <input type="hidden"  name="TesisID"  value="{{k[1]}}" required>
+
+
+                      <button type="submit" style="border-radius:50px;" id="silme" name="silme" class="btn btn-outline-danger">x</button>
+
+                  </form>
+              </td>
+
+            </tr>
+           {% endfor %}
+          </tbody>
+        </table>
+
+      <hr>
+          <div id="form-id" class="formdegis" style="background-color:#f18973;text-align:center;margin:0 auto;">
+              <br>
+                 <h2>***Güncelleme Paneli***</h2>
+              <br>
+              <form action="/updatekullanimlar" method="post">
+                  <label for="MusteriTC">TC NO:</label>
+              <input type="text" id="MusteriTC" name="MusteriTC" placeholder="TC" required><br><br>
+                  <label for="TesisID">TESİS ID:</label>
+              <input type="text" id="TesisID" name="TesisID" placeholder="TESİS ID" required><br><br>
+                  <label for="KullanimSuresi">YENİ KULLANIM SÜRESİ:</label>
+              <input type="time" id="KullanimSuresi" name="KullanimSuresi" placeholder="Yeni Kullanım Süresi" required><br><br>
+              <button class="btn btn-outline-success" id="close-form" type="submit" >Güncelleme yap</button>
+             </form>
+
+               <br>
+              <hr>
+          </div>
+          <div id="form-id-2" class="formdegis" style="background-color:#f18973;text-align:center;margin:0 auto;">
+              <br>
+                 <h2>***Ekleme Paneli***</h2>
+              <br>
+              <form action="/insertkullanimlar" method="post">
+                  <label for="c">TC NO:</label>
+              <input type="text" id="c" name="MusteriTC" placeholder="TC" required><br><br>
+                  <label for="b">TESİS ID:</label>
+              <input type="text" id="b" name="TesisID" placeholder="TESİS ID" required><br><br>
+                  <label for="r">KULLANIM SÜRESİ:</label>
+              <input type="time" id="r" name="KullanimSuresi" placeholder="Yeni Kullanım Süresi" required><br><br>
+              <button class="btn btn-outline-success btn-md" id="close-form-2" type="submit" >Ekleme yap</button>
+             </form>
+
+               <br>
+
+          </div>
+         <hr>
+
+      <div style="text-align:center;margin:0 auto;">
+           <button class="btn btn-outline-info" id="form-acma-button">Düzenle</button>
+           <button class="btn btn-outline-success" id="form-acma-button-2">Ekle</button>
+
+
+      </div>
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+    <script src="https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="https://getbootstrap.com/docs/5.3/examples/sidebars/sidebars.js"></script>
+
+
+</body>
+</html>

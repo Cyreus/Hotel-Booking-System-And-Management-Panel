@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Sunset Otel Rezervasyon</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+  <header>
+    <a href="#" class="logo">Sunset</a>
+    <ul class="navigation">
+      <li><a href="#" class="active">Anasayfa</a></li>
+      <li><a href="#">Hakkında</a></li>
+      <li><a href="#">İletişim</a></li>
+
+    </ul>
+  </header>
+
+  <section class="parallax">
+    <h1 id="title">Bu yaz sunset size eşlik etsin!</h1>
+    <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/22735710-8cec-41c3-856a-32fb20242e99" id="bottom" alt="vacation" />
+    <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/3afe3065-7d00-4575-b308-34eba3611d53" id="woman" alt="vacation" />
+    <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/52d5bbe0-1760-4b44-a455-b443c1e6181c" id="leftplant" alt="vacation" />
+    <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/d6b48ee4-151b-49e8-b547-82de1ebe053d" id="rightplant" alt="vacation" />
+    <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/447910c7-b347-4a2d-b72a-6112efd5a69f" id="ball" alt="vacation" />
+    <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/f8acf376-2ffe-418d-af72-9d8da6130a6f" id="lifebuoy" alt="vacation" />
+  </section>
+
+  <section class="blog">
+    <h2>Kendine bir iyilik yap!</h2>
+    <p>Eşi benzeri olmayan bir otel deneyimlerine atılmaya hazır mısınız?
+    </p>
+    <p>
+       Eğer aradığınız cennete bir köşeyse Sunset'ten başka bir yere bakmayın!
+       El değmemiş kıyıları, kristal berraklığındaki suları ve kendinizi şımartabileceğiniz çok sayıda aktivite içeren otellerimiz
+       ile mutluluğa biletinizi şimdi alın
+      . 🏖️
+    </p>
+    <div class="cards">
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/antalya.jpg') }}"/>
+
+        <div class="overlay">
+          <h3>Antalya Sunset Beach</h3>
+          <p>
+            Sakin sahil şeridinde yer alan antalyanın en iyi sahiline sahip sunset beach, nefesinizi kesecek bozulmamış doğal güzelliğe sahiptir. Kendinizi pudra beyazı kumlar boyunca yürüdüğünüzü, deniz melteminin hafif okşamalarını hissettiğinizi ve göz alabildiğine uzanan masmavi sulara hayran kaldığınızı hayal edin. Duyularınızı uyandıracak ve ruhunuzu rahatlatacak bir manzara.
+
+          </p>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/kus.jpg') }}"/>
+        <div class="overlay">
+          <h3>Kuşadası Sunset Paradise</h3>
+          <p>
+            Kuş Adası Sunset Paradise, hayallerinizdeki tatil kaçamağını gerçeğe dönüştürmek için ideal bir mekan. Eşsiz güzellikteki doğasıyla sizi karşılayan adada, huzur dolu bir tatil deneyimi sunuyoruz. Denizin serin sularında yüzmenin keyfini çıkarırken, altın rengi kumsallarda güneşin tadını çıkarabilirsiniz. Otelimizdeki lüks konaklama birimlerinde dinlenirken, göz alıcı gün batımını izlemek unutulmaz anlarınıza eşlik edecek. Ayrıca, lezzetli yemeklerimiz ve içeceklerimizle damaklarınızı şımartırken, spa hizmetlerimizle bedeninizi ve ruhunuzu yenileyebilirsiniz. Kuş Adası Sunset Paradise'de unutulmaz bir tatil için bize katılın ve hayatınızın en özel anlarına tanıklık edin.
+          </p>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/kara.jpg') }}"/>
+        <div class="overlay">
+        <h3>Karadeniz Grand Hotel</h3>
+        <p>
+          Karadeniz Grand Hotel, sizi eşsiz doğasıyla büyüleyen Karadeniz'in kalbinde unutulmaz bir konaklama deneyimi sunuyor. Şehrin karmaşasından uzaklaşarak, doğanın kucağında huzurlu bir mola için ideal bir nokta olan otelimizde, rahatınız ve keyfiniz için her şey düşünüldü. Karadeniz'in serin sularında yüzmenin ve kumsalda güneşlenmenin tadını çıkarırken, muhteşem dağ manzarası eşliğinde huzur bulacaksınız. Otelimizin sunduğu konforlu ve şık odalarda dinlenirken, lezzetli Karadeniz mutfağından enfes yemeklerimizle damaklarınızı şımartabilirsiniz.Karadeniz Grand Hotel'de unutulmaz bir tatil için bizi tercih edin ve yaşamınızın en özel anlarına tanıklık edin.
+        </p>
+
+      </div>
+      </div>
+       <div class="cardx">
+        <div class="overlay2">
+
+           <a href="{{url_for('MusteriEkleme')}}">
+            <button type="button" class="btn btn-info" name="button_value" value="Antalya Sunset Beach">Hemen rezervasyon yap!</button>
+          </a>
+
+
+       </div>
+      </div>
+
+    </div>
+
+
+
+    <p>
+      Sunset Paradise'ta bize katılın ve plajın büyüsünün sizi güneş,
+      deniz ve gülümsemelerle dolu bir dünyaya sürüklemesine izin verin!
+         🏝️✨
+    </p>
+  </section>
+</body>
+<!-- partial -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText3.min.js'></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

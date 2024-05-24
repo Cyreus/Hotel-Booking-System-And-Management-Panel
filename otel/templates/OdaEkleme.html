@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+       <style>
+        input{
+
+            color:black;
+
+        }
+    </style>
+</head>
+<body>
+<h1>Oda Ekleme Formu</h1>
+    <form action="/oda_ekle" method="POST">
+        <label for="OdaNo">Oda Numarası:</label><br>
+        <input type="text" id="OdaNo" name="OdaNo"><br>
+
+        <label for="Fiyat"> Fiyat:</label><br>
+        <input type="text" id="Fiyat" name="Fiyat"><br>
+
+        <label for="DolulukOrani">Doluluk:</label><br>
+        <input type="number" id="DolulukOrani" name="DolulukOrani"><br>
+
+        <label for="OdaTuru">Odanın Türü:</label><br>
+        <input type="text" id="OdaTuru" name="OdaTuru"><br><br>
+
+        <label for="OtelID">Otelin ID numarası:</label><br>
+        <input type="text" id="OtelID" name="OtelID"><br><br>
+
+        <input type="submit" value="Gönder">
+    </form>
+
+</body>
+</html>

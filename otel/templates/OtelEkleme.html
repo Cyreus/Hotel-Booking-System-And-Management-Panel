@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+       <style>
+        input{
+
+            color:black;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Otel Ekleme Formu</h1>
+    <form action="/otel_ekle" method="POST">
+        <label for="OtelID">Otel ID:</label><br>
+        <input type="text" id="OtelID" name="OtelID"><br>
+
+        <label for="OtelAdi"> Otel Adı:</label><br>
+        <input type="text" id="OtelAdi" name="OtelAdi"><br>
+
+        <label for="OtelAdres">Adres:</label><br>
+        <input type="text" id="OtelAdres" name="OtelAdres"><br>
+
+        <label for="OtelSiralama">Yıldız Sayısı:</label><br>
+        <input type="text" id="OtelSiralama" name="OtelSiralama"><br><br>
+
+
+        <input type="submit" value="Gönder">
+    </form>
+
+</body>
+</html>
