@@ -7,7 +7,7 @@ The project consists of a hotel reservation system and an admin panel. The hotel
 
 
 ## Management Panel
-To access the admin panel, you can enter the link in down blow. Since it is used only on the local network, a security system or firewall has not been implemented.
+To access the admin panel, you can enter the link in down blow. Since it is used only on the local network, a security system or web security wall has not been implemented.
 
  ```bash
   ---->localhost/Panel
