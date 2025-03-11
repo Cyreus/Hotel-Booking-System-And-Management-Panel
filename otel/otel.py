@@ -5,7 +5,7 @@ from flask import Flask, render_template, request, url_for, redirect
 import pyodbc
 
 app= Flask(__name__)
-conn = pyodbc.connect('Driver={SQL Server};Server=LAPTOP-86IUOHF8\SQLEXPRESS;Database=otelrezervasyon;Trusted_Connection=True')
+conn = pyodbc.connect('Driver={SQL Server};Server=LAPTOP-servername\SQLEXPRESS;Database=otelrezervasyon;Trusted_Connection=True')
 
 
 
